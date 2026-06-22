@@ -1,0 +1,108 @@
+/* Reset global bar styling with clear screen spacing */
+window#waybar {
+    background-color: rgba(26, 27, 38, 0.85); /* Deep dark semi-transparent */
+    border-radius: 10px;
+    color: #ffffff;
+    font-family: "JetBrainsMono NF", "Noto Sans", sans-serif;
+    font-size: 13px;
+    transition-property: background-color;
+    transition-duration: .5s;
+}
+
+window#waybar .hidden {
+    opacity: 0.2;
+}
+
+/* Base style for every standalone module container */
+#workspaces,
+#clock,
+#pulseaudio,
+#network,
+#battery,
+#custom-power {
+    background-color: #24283b; /* Accent dark gray container */
+    padding: 2px 12px;
+    margin: 4px 3px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+/* Left side Workspace Pill adjustments */
+#workspaces button {
+    padding: 0 5px;
+    background-color: transparent;
+    color: #a9b1d6;
+    border: none;
+    border-radius: 4px;
+}
+
+#workspaces button.active {
+    background-color: #7aa2f7;
+    color: #1a1b26;
+    font-weight: bold;
+}
+
+#workspaces button:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* Center Clock formatting */
+#clock {
+    color: #c0caf5;
+    font-weight: bold;
+}
+
+/* Right layout module accent colors */
+#pulseaudio {
+    color: #7aa2f7;
+}
+
+#network {
+    color: #b4f9a8;
+}
+
+#battery {
+    color: #e0af68;
+}
+
+#battery.critical:not(.charging) {
+    background-color: #f7768e;
+    color: #1a1b26;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+/* Rightmost Power icon formatting with breathing room */
+#custom-power {
+    color: #f7768e;
+    font-size: 14px;
+    padding-right: 14px;
+    margin-right: 5px;
+}
+#pulseaudio-slider {
+    min-width: 80px;
+    margin-left: 4px;
+    margin-right: 8px;
+}
+
+#pulseaudio-slider trough {
+    min-height: 10px;
+    border-radius: 5px;
+    background-color: #313244; /* Dark background track */
+}
+
+#pulseaudio-slider highlight {
+    min-height: 10px;
+    border-radius: 5px;
+    background-color: #cba6f7; /* Colored fill line */
+}
+
+#pulseaudio-slider slider {
+    min-height: 12px;
+    min-width: 12px;
+    border-radius: 50%;
+    background-color: #f5e0dc; /* Grab handle circle */
+}
