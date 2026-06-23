@@ -19,10 +19,10 @@
     },
 
     "clock": {
-        "format": "{:%I:%M %p}  ",
-        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
-    },
-
+    "format": "{:%I:%M %p | %d/%m/%Y}",
+    "on-click": "gsimplecal",
+    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+},
     "pulseaudio": {
         "format": "{volume}% {icon}",
         "format-muted": " Muted",
